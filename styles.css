@@ -46,3 +46,13 @@ ul li {
 	font-family: sans-serif;
 	letter-spacing: 1px;
 }
+li:hover {
+	background: blue;
+}
+li:hover a {
+	color: white;
+}
+a {
+	color: blue;
+	text-decoration: none;
+}

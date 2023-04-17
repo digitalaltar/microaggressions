@@ -13,6 +13,7 @@ const allWords = ['allyship', 'inclusion', 'empathy', 'equity', 'respect', 'kind
 
 const wordsCount = 8;
 const words = getRandomSubarray(allWords, wordsCount);
+// going to update this eventually to allow for user to change these parameters
 const userInput = ['homophobia','transphobia','sexism','racism','classism','ableism','xenophobia','colorism'];
 
 function createSpecialWordsArray(userInput) {
@@ -150,7 +151,6 @@ function handleMouseClick(e) {
       mouseY >= wordObject.boundingBox.top &&
       mouseY <= wordObject.boundingBox.bottom
     ) {
-      console.log('Word object clicked:', wordObject);
       wordObject.clicked = true;
       collisionDetected = true;
     }
@@ -158,8 +158,8 @@ function handleMouseClick(e) {
 
   if (collisionDetected) {
     // If a collision was detected, play a sound
-    const audio = new Audio('bounce.wav');
-    audio.play();
+    //const audio = new Audio('bounce.wav');
+    //audio.play();
   }
 }
 
