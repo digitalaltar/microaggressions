@@ -21,8 +21,8 @@ This artwork is implemented using JavaScript and is based on the HTML5 Canvas AP
 
 1. Clone this repository.
 2. Open index.html in your browser.
-3. Interact with the text to explore the hidden microaggressions.
+3. Interact with the text to explore the microaggressions.
 
 ## Credits
 
-This project was created by Digital Altar.
+This project was created by [Digital Altar](https://digitalaltar.com).
