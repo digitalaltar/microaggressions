@@ -51,9 +51,6 @@ canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
 // Generate random text
-// ... (the rest of the code remains the same)
-
-// Generate random text
 let wordObjects = [];
 let x = 0;
 let y = 0;
@@ -187,7 +184,6 @@ function updateCanvas() {
       }, 300);
     }
 
-    // Draw word on canvas
 // Draw word on canvas
 ctx.font = `${wordObject.fontSize}px Arial`;
 ctx.fillStyle = wordObject.color;
@@ -200,8 +196,6 @@ ctx.fillText(wordObject.text, wordObject.boundingBox.left, wordObject.boundingBo
 
 // Start animation
 updateCanvas();
-
-// ... (the rest of the code remains the same)
 
 function handleInteraction(e) {
   e.preventDefault(); // Prevents default behavior like scrolling
@@ -239,6 +233,7 @@ function handleInteraction(e) {
   }
 }
 
+// Drag the Word
 function dragWord(interactionX, interactionY) {
   if (draggedWordObject) {
     // Calculate new position for the dragged word object
@@ -254,6 +249,7 @@ function dragWord(interactionX, interactionY) {
   }
 }
 
+// Increase the font size
 function increaseWordFontSize(wordObject) {
   const fontSizeIncrement = 10;
   wordObject.fontSize += fontSizeIncrement;
@@ -263,6 +259,7 @@ function increaseWordFontSize(wordObject) {
   wordObject.boundingBox.right = wordObject.boundingBox.left + wordWidth;
 }
 
+// CHange the Color
 function changeWordColor(wordObject) {
   const randomRed = Math.floor(Math.random() * (maxColorValue - minColorValue + 1) + minColorValue);
   const randomGreen = Math.floor(Math.random() * (maxColorValue - minColorValue + 1) + minColorValue);
@@ -271,6 +268,7 @@ function changeWordColor(wordObject) {
   wordObject.color = randomColor;
 }
 
+// Push Away the Words
 function pushAwayWords(clickedWordObject, allWordObjects) {
   const pushDistance = 20;
   allWordObjects.forEach((otherWordObject) => {
@@ -293,6 +291,7 @@ function pushAwayWords(clickedWordObject, allWordObjects) {
   });
 }
 
+// on Mouse Move
 function handleMouseMove(e) {
   e.preventDefault();
   if (draggedWordObject) {
@@ -303,6 +302,7 @@ function handleMouseMove(e) {
   }
 }
 
+// on Mouse Up
 function handleMouseUp() {
   // Release the dragged word object
   draggedWordObject = null;
